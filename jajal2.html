@@ -1,0 +1,249 @@
+<html>
+  <head>
+    <title>List Pelanggaran Add</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-color: #bab4b4;
+      }
+
+      .container {
+        display: flex;
+        flex-grow: 1;
+        width: 100%;
+      }
+
+      .sidebar {
+        width: 250px;
+        background-color: #4a4a4a;
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      sidebar h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar ul li {
+        margin-bottom: 10px;
+      }
+      .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+      .sidebar ul li a i {
+        margin-right: 10px;
+      }
+      .content {
+        flex-grow: 1;
+        background: url("img/background.jpg") no-repeat center center;
+        background-size: cover;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .content h1 {
+        color: white;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .form-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+      }
+      .form-container h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+      .form-group select {
+        background: url('data:image/svg+xml;utf8,<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9l-7 7-7-7"></path></svg>')
+          no-repeat right 10px center;
+        background-size: 16px 16px;
+      }
+      .form-group textarea {
+        resize: vertical;
+      }
+      .form-group button {
+        padding: 10px 20px;
+        background-color: #4a4a4a;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .form-group.button-group {
+        text-align: right;
+      }
+      .form-row {
+        display: flex;
+        justify-content: space-between;
+      }
+      .form-row .form-group {
+        flex: 1;
+        margin-right: 10px;
+      }
+      .form-row .form-group:last-child {
+        margin-right: 0;
+      }
+      .footer {
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+      }
+      .footer span {
+        margin: 0 5px;
+      }
+      @media (max-width: 768px) {
+        .sidebar {
+          width: 100%;
+          text-align: center;
+        }
+        .content {
+          padding: 10px;
+        }
+        .form-container {
+          width: 100%;
+          padding: 10px;
+        }
+        .form-row {
+          flex-direction: column;
+        }
+        .form-row .form-group {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+        .form-row .form-group:last-child {
+          margin-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>System Informasi Pelaporan Pelanggaran</h1>
+    </div>
+    <div class="container">
+      <div class="sidebar">
+        <h2>Main Navigation</h2>
+        <ul>
+          <li>
+            <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-folder"></i> Data Kategori</a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-exclamation-triangle"></i> Kategori
+              Pelanggaran</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-list"></i> List Pelanggaran</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <h1>List Pelanggaran Add</h1>
+        <div class="form-container">
+          <h2>List Pelanggaran Add</h2>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="kelas">Kelas</label>
+              <select id="kelas">
+                <option value="">Select</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="nisn">NISN</label>
+              <input type="text" id="nisn" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="nama-siswa">Nama Siswa</label>
+            <input type="text" id="nama-siswa" />
+          </div>
+          <div class="form-group">
+            <label for="kode-pelanggaran">Kode Pelanggaran</label>
+            <select id="kode-pelanggaran">
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pelanggaran">Pelanggaran</label>
+            <select id="pelanggaran">
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="catatan">Catatan</label>
+            <textarea id="catatan" rows="2"></textarea>
+          </div>
+          <div class="form-group button-group">
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">Copyright &copy; Asatidzal Hakiim</div>
+  </body>
+</html>
