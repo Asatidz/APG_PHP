@@ -1,0 +1,249 @@
+<html>
+  <head>
+    <title>System Informasi Pelaporan Pelanggaran</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        background-color: #f0f0f0;
+      }
+      .container {
+        display: flex;
+        height: calc(100vh - 50px);
+      }
+      .header {
+        background-color: #ccc;
+        padding: 10px 20px;
+        text-align: left;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+      }
+      .sidebar {
+        width: 250px;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .sidebar h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar ul li {
+        margin: 15px 0;
+      }
+      .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+      .sidebar ul li a i {
+        margin-right: 10px;
+      }
+      .sidebar ul li a:hover {
+        text-decoration: underline;
+      }
+      .content {
+        flex: 1;
+        background-color: #fff;
+        padding: 20px;
+        position: relative;
+      }
+      .content h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .content .add-data {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+      .content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      .content table,
+      .content th,
+      .content td {
+        border: 1px solid #ddd;
+      }
+      .content th,
+      .content td {
+        padding: 10px;
+        text-align: left;
+      }
+      .content th {
+        background-color: #f2f2f2;
+      }
+      .content td i {
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      .footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .footer span {
+        margin: 0 5px;
+      }
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .sidebar {
+          width: 100%;
+          height: auto;
+        }
+        .content {
+          padding: 10px;
+        }
+        .content .add-data {
+          top: 10px;
+          right: 10px;
+          padding: 5px 10px;
+        }
+        .content h1 {
+          font-size: 20px;
+        }
+        .content table,
+        .content th,
+        .content td {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">System Informasi Pelaporan Pelanggaran</div>
+    <div class="container">
+      <div class="sidebar">
+        <div>
+          <h2>Navbar Navigation</h2>
+          <ul>
+            <li>
+              <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-database"></i> Data Kategori</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-list"></i> Kategori Pelanggaran</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-exclamation-triangle"></i> List Pelanggaran</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Kategori Pelanggaran</h1>
+        <button class="add-data">+ Add Data</button>
+        <table>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Nama Pelanggaran</th>
+              <th>Point</th>
+              <th>Kode Pelanggaran</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.</td>
+              <td>Seragam Tidak Rapi</td>
+              <td>1</td>
+              <td>1</td>
+              <td>
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-trash"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>Memakai Asesoris Berlebihan</td>
+              <td>1</td>
+              <td>2</td>
+              <td>
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-trash"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>3.</td>
+              <td>Merokok Di Jam Sekolah</td>
+              <td>5</td>
+              <td>5</td>
+              <td>
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-trash"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>4.</td>
+              <td>Terlibat Tindak Kriminal</td>
+              <td>80</td>
+              <td>4</td>
+              <td>
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-trash"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>5.</td>
+              <td>Bertindak Tidak Sopan</td>
+              <td>5</td>
+              <td>10</td>
+              <td>
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-trash"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer">
+      By Made <span>❤️</span> by TechnoMancers| <span>😊</span> 2025
+    </div>
+  </body>
+</html>
